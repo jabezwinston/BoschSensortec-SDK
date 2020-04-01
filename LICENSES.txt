@@ -1,0 +1,401 @@
+﻿================ Bosch Sensortec COINES =====================================
+
+This package contains the Bosch Sensortec COINES (COmmunication with 
+INertial and Environmental Sensors) sensor evaluation software.
+
+The software provides a low-level interface to Bosch Sensortec's 
+Application Board APP2.0. The user can access Bosch Sensortec's MEMS 
+sensors through a C interface. COINES can be used along with SensorAPI 
+of the sensor, which is part of the software installation, but can also 
+be obtained from https://github.com/BoschSensortec. Source code of 
+sample applications and SensorAPI are provided with the COINES library as 
+a package. The user can modify, compile and run the sample applications. 
+
+COINES can be used to see how to use the SensorAPI in an embedded 
+environment and allows convenient data logging. 
+
+================ Licenses ===================================================
+
+End User License Agreement for COINES
+
+By installing and using this software (“Software”), together with 
+any hardware board, sensor board, firmware and documentation provided by 
+Bosch Sensortec, you (“You”) are agreeing to the terms and 
+conditions of this End User License Agreement (“Agreement”). Do not 
+install or use this software before you have read and agreed to this 
+Agreement. 
+
+Bosch Sensortec products are developed for the consumer goods industry. 
+They are not designed or approved for use in military applications, 
+life-support appliances, safety-critical automotive applications and 
+devices or systems where malfunctions of these products can reasonably 
+be expected to result in personal injury. They may only be used within 
+the parameters of the product data sheet. 
+
+The provided Software allows You to evaluate and test Bosch Sensortec 
+products, offering limited features. Bosch Sensortec disclaims any and 
+all warranties and liabilities of any kind, including without limitation 
+warranties of non-infringement of intellectual property rights or 
+copyrights of any third party. The code of the Software is provided for 
+illustrative purposes only and no evaluation regarding infringement of 
+intellectual property rights or copyrights or regarding functionality, 
+performance or error has been made. 
+
+If not otherwise stated in the provided code of the Software, the 
+following license terms and conditions apply: 
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are 
+met: 
+
+Redistributions of source code must retain the above copyright notice, 
+this list of conditions and the following disclaimer. 
+
+Redistributions in binary form must reproduce the above copyright 
+notice, this list of conditions and the following disclaimer in the 
+documentation and/or other materials provided with the distribution. 
+
+Neither the name of the copyright holder nor the names of the 
+contributors may be used to endorse or promote products derived from 
+this software without specific prior written permission. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS 
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED 
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER OR 
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+The information provided is believed to be accurate and reliable. The 
+copyright holder assumes no responsibility for the consequences of use 
+of such information nor for any infringement of patents or other rights 
+of third parties which may result from its use. No license is granted by 
+implication or otherwise under any patent or patent rights of the 
+copyright holder. 
+
+Copyright (C) 2018 Bosch Sensortec GmbH
+
+=============================================================================
+The COINES examples,sensorAPI and other source code with the text,
+"SPDX-License-Identifier: BSD-3-Clause" are licensed under "BSD-3-Clause"
+
+BSD-3-Clause License : https://opensource.org/licenses/BSD-3-Clause
+
+=============================================================================
+Licence Terms and Conditions for the Use of Bosch Sensortec GmbH, 
+Reutlingen BSECxxx Software 
+
+Status: July 2016 
+
+1. Scope 
+
+1.1 The subject matter of the licence terms and conditions shall be the 
+use by the person that or legal entity who’s representative has 
+accepted these Terms & Conditions (subsequently “User”) of the 
+Software specified in Ex-hibit 1 (subsequently “Software”), produced 
+by Bosch Sensortec GmbH (subsequently “BST”) or distributed by the 
+latter in its own name, including the associated program documentation. 
+
+1.2 Unless otherwise agreed with the User in individual cases the User 
+shall ex-clusively receive the Software in the executable file format 
+“exe” for self-installation on his system. The User may download it 
+via the BST Homepage – the online portal for the customers. 
+
+1.3 The Software and the associated operating instructions shall be 
+protected by copyright. In relation to the User all rights in respect of 
+the Software shall ex-clusively belong to BST. 
+
+2. Scope of use 
+
+2.1 On the basis of these licence terms and conditions User shall 
+receive a non-exclusive, non-transferable right of use in the software 
+for developing refer-ence designs (demonstrator for testing the 
+functionality of hardware and software components during the development 
+phase) containing BST envi-ronmental sensor devices and to use the 
+Software in combination with BST environmental sensor devices in 
+products of User. 
+
+2.2 Further on BST hereby grants to User the non-exclusive and 
+non-transferable right to generate and copy compiled object code of the 
+Software and to use and sell compiled object code of the Software 
+worldwide in com-bination with BST environmental sensor devices in 
+products of User. 
+
+2.3 Use shall mean the loading, display, running, transmission and 
+storage of the Software for purposes of its operation and the processing 
+of data sets on the system of the User, on which the Software is 
+installed. 
+
+2.4 The User shall be entitled to create a back-up copy of the Software, 
+which must display a copy of the original description (including the 
+note on copy-right). The use of the back-up copy shall only be 
+permissible if the original copy of the Software supplied by BST 
+deteriorates or is destroyed. The use of the back-up copy by the User 
+shall also be governed by these licence terms and conditions. In all 
+other respects the User shall not be entitled to copy the Software or 
+the program documentation or parts thereof outside the permitted use 
+without the prior written approval of BST. 
+
+2.5 Without the approval of BST the user shall not be entitled to 
+revise, change or otherwise amend the Software, link it to other 
+programs via other inter-faces than the ones provided, retranslate 
+(decompile) it, remove, circumvent or change security codes or features 
+used for the identification of the Soft-ware or remove from the Software 
+and the program documentation details of the proprietorship, copyrights 
+or other industrial property rights of BST. The provisions of §§ 69 d 
+paragraph 3 and § 69 e UrhG shall not be affect-ed. 
+
+2.6 The right of termination of the licence without notice for cause 
+shall be re-served. Cause for a termination without notice by BST shall 
+exist, in particu-lar, if the User culpably violates the provisions of 
+section 2 of these licence terms and conditions in more than a merely 
+immaterial manner. In such a case the user shall not be entitled to a 
+claim for repayment of the amount paid for the provision of the Software 
+and the granting of the licence. BST shall reserve the right to claim 
+additional damages. 
+
+2.7 The right of use of the User in respect of the software provided 
+shall termi-nate on expiry of the licence. The User shall delete all the 
+copies installed on his systems as well as copies of the Software on 
+separate data media and also destroy the operating instructions 
+provided. BST must be informed in writing of the complete deletion or 
+destruction and conclusive proof of this must be provided if requested 
+by BST. 
+
+3. Obligations of User 
+
+3.1 The User shall not misuse the Software or have it misused in any 
+way. The User shall also not attempt to retrieve information or data 
+without proper au-thorisation or to have it retrieved by unauthorised 
+third parties or interfere with the software or have it interfered with. 
+
+3.2 The User shall promptly inform BST in writing (§ 126 b BGB) of any 
+defects or faults affecting the contractual services and explain the 
+circumstances and the manner in which the defect or fault occurs as well 
+as actively assist BST in ascertaining the cause of the malfunction by 
+supplying relevant doc-umentation (hard copy, etc.) and other documents 
+and data, etc. required by BST for analysing and correcting the defect 
+or fault. If the examination of the User’s defect notice by BST shows 
+that BST was not responsible for the defect then BST may reserve the 
+right to charge the cost of the examination of the defect notice to the 
+User. This provision, however, shall not apply if the User applying due 
+care and diligence would not have been able to know that the malfunction 
+was not within the area of responsibility of BST. 
+
+3.3 When using the Software and the contractual services the User shall 
+comply with all applicable laws, rules and regulations. The User shall 
+not be permit-ted to use data or contents, which are illegal or infringe 
+third party industrial property rights or other third party rights. 
+
+4. Updates / Upgrades 
+
+4.1 BST shall continue to develop the Software at its discretion and 
+provide the User with minor functional improvements as well as 
+corrections as they arise (Updates). The updates shall be provided to 
+the User free of charge as a download or in another suitable format. BST 
+shall always maintain and fur-ther develop the current version of the 
+Software. This shall apply in particular to the compatibility of the 
+Software with new sensor technology. The User, therefore, shall be 
+obligated to always use the current version of the Software. 
+
+4.2 BST shall reserve the right to remove certain functions – in 
+particular those, which are not or hardly used – from the Software as 
+well as introduce new important functions and upgrades on a chargeable 
+basis. 
+
+5. Warranty 
+
+5.1 Technical data, specifications and performance details in public 
+communica-tions, in particular in advertising media, shall not 
+constitute quality descrip-tions. The functionality of the Software 
+shall correspond to the description in the operating instructions and 
+any additional agreements made in this re-spect. 
+
+5.2 Claims for defects shall become statute-barred after twelve months 
+unless the defect has been maliciously kept silent. 
+
+5.3 Any enforcement of claims for defects shall require that the 
+respective de-fect is reported in writing within one week of its initial 
+discovery. 
+
+5.4 BST shall not be liable in cases, in which the User has made changes 
+to the Software, unless such changes did not affect the origin of the 
+defect. 
+
+5.5 User shall care for and guarantees that the Software shall neither 
+be used nor combined with other software, including but not limited to 
+Open Source Software, in any way that may cause viral effect (due to 
+combination or use of Software together with other software the owner or 
+representative of the owner can claim that for the Software license 
+conditions applicable for the other software would apply as well) to the 
+Software. 
+
+5.6 User shall indemnify and hold BST harmless from and against any 
+liability, claims, demands and expenses (including attorney fees) 
+resulting from any actual or alleged defect or damages or injuries 
+(including death) related to the Software sold or otherwise distributed 
+by User or failure by User to give appropriate instructions of use or 
+recall defective products containing the Software. 
+
+6. Liability 
+
+6.1 In all cases of contractual and non-contractual liability BST shall 
+only be lia-ble subject to the following limitations: 
+
+a) with the full amount in case of intent and also if a quality 
+characteristic warranted by BST is missing; 
+
+b) in cases of gross negligence only up to the amount of the foreseeable 
+damage, which was to be prevented by the obligation violated; 
+
+c) in all other cases: only in case of a violation of a material 
+contractual obligation jeopardising the contractual purpose, but in any 
+case only up to the amount of the foreseeable damage. The liability 
+shall be limited to Euro 100 per claim and to a total maximum amount of 
+Euro 400 in respect of this contract. 
+
+6.2 The limitations of liability in accordance with clause 6.1 shall not 
+apply to personal injury and claims based on the product liability law. 
+
+6.3 BST shall be entitled to the defence of contributory fault or 
+negligence. 
+
+6.4 Clause 7.2 shall apply accordingly to the limitation period and the 
+statutory period of limitation shall apply to claims in accordance with 
+clause 1 a) and clause 2. The limitation period in accordance with 
+sentence 1 shall begin at the point in time defined in § 199 paragraph 
+1 BGB. It shall apply at the latest after expiry of the maximum time 
+limits stated in § 199 paragraph 3 and 4 BGB. 
+
+7. Miscellaneous 
+
+7.1 These licence terms and conditions shall also apply to later 
+versions (Up-dates) and upgrades of the Software made available by BST 
+to the User, un-less agreed otherwise when such later versions or 
+upgrades are provided. 
+
+7.2 If one or more provisions of these licence terms and conditions or 
+certain clauses are or become invalid or if the terms and conditions 
+suffer from de-fects in law this shall not affect the remaining 
+provisions. In such a case the parties shall undertake to agree a valid 
+provision coming economically as close as possible to the invalid 
+provision if the parties had known its invalidity or absence. 
+
+7.3 There shall be no side agreements to these terms and conditions of 
+use. Changes and amendments of these terms and conditions of use shall 
+be made in writing. This requirement may only be waived in writing. 
+
+7.4 These terms and conditions of use and any and all obligations 
+arising there-from shall be subject to the law of the Federal Republic 
+of Germany, how-ever, excluding the Convention on International Sale of 
+Goods (CISG). 
+
+7.5 The exclusive place of jurisdiction for all legal disputes arising 
+from or in connection with this contract shall be the place of the 
+registered office of BST. BST, however, shall also be entitled to bring 
+legal proceedings at the general place of jurisdiction of the User. 
+
+=============================================================================
+Third party licences
+
+The graphical user interfaces is based on LGPL licensed libraries from Qt:
+
+       http://qt-project.org/
+
+According to the LGPL, you have the right to receive full source code for the
+LGPL licensed libraries we use. Contact us to get access to the source code 
+for these libraries, or alternatively, download them from their respective 
+project pages.
+
+=============================================================================
+
+`dfu-util` used for code download is licensed under GPL v2
+
+Source code and binaries can be obtained from the below link.
+       http://dfu-util.sourceforge.net/
+	   
+GPLv2 License : https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html
+
+=============================================================================
+
+Advanced Software Framework from Microchip
+
+Subject to your compliance with these terms, you may use Microchip
+software and any derivatives exclusively with Microchip products.
+It is your responsibility to comply with third party license terms applicable
+to your use of third party software (including open source software) that
+may accompany Microchip software.
+
+THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES,
+WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,
+INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,
+AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BE
+LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
+LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE
+SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE
+POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENT
+ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY
+RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+
+https://www.microchip.com/mplab/avr-support/advanced-software-framework
+
+=============================================================================
+
+nRF5 SDK from Nordic
+
+Copyright (c) 2010 - 2018, Nordic Semiconductor ASA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form, except as embedded into a Nordic
+   Semiconductor ASA integrated circuit in a product or a software update for
+   such product, must reproduce the above copyright notice, this list of
+   conditions and the following disclaimer in the documentation and/or other
+   materials provided with the distribution.
+
+3. Neither the name of Nordic Semiconductor ASA nor the names of its
+   contributors may be used to endorse or promote products derived from this
+   software without specific prior written permission.
+
+4. This software, with or without modification, must only be used with a
+   Nordic Semiconductor ASA integrated circuit.
+
+5. Any software provided in binary form under this license must not be reverse
+   engineered, decompiled, modified and/or disassembled.
+
+THIS SOFTWARE IS PROVIDED BY NORDIC SEMICONDUCTOR ASA "AS IS" AND ANY EXPRESS
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY, NONINFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL NORDIC SEMICONDUCTOR ASA OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK
+https://developer.nordicsemi.com/nRF5_SDK
+
+=============================================================================
+
+libUSB-1.0 used for direct USB communication is licenced under LGPL v2.1
+
+https://github.com/libusb/libusb/releases
+
+LGPL v2.1 License : https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+
+====================================================================================
+

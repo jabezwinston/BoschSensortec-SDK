@@ -1,0 +1,109 @@
+COINES v2.2
+
+Updates
+
+* Added Python wrapper for coinesAPI - coinespy (compatible with Development Desktop 2.0 genericAPI)
+* Added APIs for 16-bit SPI read,write for upcoming sensors
+* Included BMI270 examples
+* Package manager (python based) for fetching latest sensorAPI included and integrated with COINES Code Editor
+* Added software support for Application Board 3.0
+_____________________________________________________________________________________________________________
+
+COINES v2.1
+
+Updates
+
+* Fixed SPI communication issue with APP2.0 MCU target
+* Linux and macOS users can now update APP2.0/BNO USB stick firmware with 'app20-flash' tool
+* Fixed APP2.0 flash memory lockout issue (avoid using DD2.0 firmware v3.1-v3.3)
+  - Use "update_bootloader" script in firmware/app2.0/coines_bootloader
+  - Use 'app20-flash' tool to update to the latest firmware (v3.4)
+* Disabled interrupt during I2C transaction to fix periodic data corruption issue
+* Fixed trouble with opening USB serial port of Application Board in Ubuntu 18.04 and latest Debian distros.
+  - Changed USB CDC ACM protocol from V.25TER mode to None
+  - It is not required to stop "ModemManager" service anymore
+* Added coines_delay_usec() to use with new sensorAPI like BMI270
+* Updated 'examples.mk' so that examples can make use of C++/Assembly code (see 'examples/template' for more information)
+* Updated sensorAPI 
+  - BMA400 (v1.5.0 --> v1.5.2)
+  - BME280 (v3.3.4 --> v3.3.7)
+  - BMI08x (v1.2.0 --> v1.4.0)
+  - BMI160 (v3.7.5 --> v3.7.7)
+  - BMP3xx (v1.1.0 --> v1.1.3)
+* BSEC Library updated to 1.4.7.4 (No support for PC targets - Linux and macOS.Run on MCU instead)
+* Included support for unofficial boards - Zeus, Nüwa
+
+Known Limitations
+
+* Interrupt streaming is limited to 1kHz for example code [using printf()] running directly on APP2.0 MCU [TARGET=MCU_APP20]
+_____________________________________________________________________________________________________________
+
+COINES v2.0
+
+Updates
+
+* COINES examples can be cross-compiled to run on APP2.0 microcontroller !!
+  - Upgrade to latest DD2.0 firmware v3.1 to run examples on MCU 
+   (Use Development Desktop software)
+  - Supports RAM and Flash download
+* Added 3 new APIs
+  - coines_get_millis() - Returns the number of milliseconds passed since the program started (PC and MCU)
+  - coines_attach_interrupt() - Attaches a interrupt to a Multi-IO pin ( MCU only )
+  - coines_detach_interrupt() - Detaches a interrupt from a Multi-IO pin ( MCU only )
+* Usage
+  - Install GNU Embedded Toolchain for ARM
+  - Go to any example and run
+    # mingw32-make TARGET=MCU_APP20 download
+  - Open Serial terminal like PuTTY or Hterm . Connect to the serial port and view the output.
+
+Known Limitations
+
+* Support for MCU target is experimental. 
+* The below APIs work only with PC Target 
+  - coines_config_streaming()
+  - coines_start_stop_streaming()
+  - coines_read_stream_sensor_data()
+  - coines_trigger_timer()
+  Hence polling and interrupt streaming examples work with PC target only.
+  Make use of coines_attach_interrupt() API for MCU target.
+* BHy2 examples are supported only on PC target.
+* BSEC examples are not supported for PC target on macOS (Use MCU target)
+* Autoreconnect of USB devices is required for MCU code download to work correctly.
+  ( USB Device switching during code download - Normal --> USB DFU <---> USB CDC)
+  Hence additional settings needs to configured for use with Virtual Machines 
+  # Oracle VM VirtualBox - Add devices to USB filter
+  # VMWare Workstation   - Not required
+
+For online support,visit https://community.bosch-sensortec.com/t5/Bosch-Sensortec-Community/ct-p/bst_community
+_____________________________________________________________________________________________________________
+
+COINES v1.2
+* Includes 
+	- sensorAPI and examples for,
+        * BMA423 - https://github.com/BoschSensortec/BMA423-Sensor-API
+        * BMA456 - https://github.com/BoschSensortec/BMA456-Sensor-API
+    - COINES Code Editor v1.1
+    - Installer for MacOS
+_____________________________________________________________________________________________________________
+
+COINES v1.1
+
+* Includes coinesAPI,sensorAPI and examples
+	- coinesAPI v1.1
+	- sensorAPI (sourced from https://github.com/BoschSensortec )
+		* BHy1		-  v1.0.4	- https://github.com/BoschSensortec/BHy1_driver_and_MCU_solution
+		* BMA400	-  v1.4.0	- https://github.com/BoschSensortec/BMA400-API
+		* BME280	-  v3.3.4	  https://github.com/BoschSensortec/BME280_driver
+		* BME680	-  v3.5.9	- https://github.com/BoschSensortec/BME680_driver
+		  - BSEC	-  v1.4.6.0	- https://www.bosch-sensortec.com/bst/products/all_products/bsec
+		* BMI08x	-  v1.2.0	- https://github.com/BoschSensortec/BMI08x-Sensor-API
+		* BMI160	-  v3.7.5	- https://github.com/BoschSensortec/BMI160_driver
+		* BMP3		-  v1.1.0	- https://github.com/BoschSensortec/BMP3-Sensor-API
+        * BHY2      -   v1.0    
+	- C examples for BHy1,BMA400,BME280,BME680,BMI08x,BMI160,BMP3,BHy2
+	- COINES Code Editor v1.0
+	- USB driver for Bosch Sensortec Application Board 2.0
+
+* C examples can be compiled on Windows and Linux with GCC v4.8 or later
+* Requires Development Desktop 2.0 firmware in the Bosch Sensortec Application Board 2.0
+  (To upgrade  Application Board 2.0 firmware,use the Development Desktop 2.0 software) 
